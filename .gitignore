@@ -10,3 +10,4 @@ build.release/
 *.swp
 downloads
 installed.host
+build.signalrclientcpp/
