@@ -42,11 +42,14 @@ BUILD.DIR=$(BASE.DIR)/build.signalrclientcpp
 ifeq ($(OS), MINGW64_NT-10.0-17763)
 SHELL :=/bin/bash
 #export PATH := /c/tools/msys64/usr/bin:$(PATH)
-ci: bootstrap.windows library.windows python
+ci: bootstrap.windows
 else
-ci: bootstrap library tests csharp python
+ci: bootstrap
 endif
 
+submodule: .FORCE
+	git submodule init
+	git submodule update
 
 bootstrap: submodule cmake
 
