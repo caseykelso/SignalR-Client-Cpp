@@ -6,3 +6,5 @@ build.debug/
 build.release/
 .vs/
 *.vcxproj.user
+.swp
+*.swp
